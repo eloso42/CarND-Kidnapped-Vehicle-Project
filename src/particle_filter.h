@@ -9,6 +9,7 @@
 #ifndef PARTICLE_FILTER_H_
 #define PARTICLE_FILTER_H_
 
+#include <random>
 #include <string>
 #include <vector>
 #include "helper_functions.h"
@@ -119,7 +120,8 @@ class ParticleFilter {
   bool is_initialized;
   
   // Vector of weights of all particles
-  std::vector<double> weights; 
+  std::vector<double> weights;
+  std::default_random_engine gen;
 };
 
 #endif  // PARTICLE_FILTER_H_
